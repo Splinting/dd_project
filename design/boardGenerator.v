@@ -58,7 +58,7 @@ always @(posedge clk_d,posedge rst) begin
                 
                 // ==  ==  ==  ==  ==  ==  ==  ==  ==  ==  ==  ==  ==  ==  ==  ==  = 
                 default:out <= out;
-            end
+            endcase
         end
         else    out <= random_reg;
     end

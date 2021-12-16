@@ -25,7 +25,7 @@ module bottomFlag (input bt,
         if (rst)
             bt_flag <= 1'b0;
         else if (cnt == 6'b111_111&~cntfull)
-            bt_flag< = 1'b1;
+            bt_flag <= 1'b1;
         else
             bt_flag <= 1'b0;
     end

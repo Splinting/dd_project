@@ -50,58 +50,66 @@ always @(posedge clk_d) begin
         end
         else if (active)
             case(black_pos)
-                LEFT_UP:
-                if (act[1])begin
-                    move      <= UP_SWAP;
-                    black_pos <= RIGHT_UP;
+                LEFT_UP:begin
+                    if (act[1])begin
+                        move      <= UP_SWAP;
+                        black_pos <= RIGHT_UP;
+                    end
+                    else if (act[2])begin
+                        move      <= LEFT_SWAP;
+                        black_pos <= LEFT_DOWN;
+                    end
+                    else begin
+                        move      <= move;
+                        black_pos <= black_pos;
+                    end
                 end
-                else if (act[2])begin
-                    move      <= LEFT_SWAP;
-                    black_pos <= LEFT_DOWN;
+                
+                RIGHT_UP:begin
+                    if (act[3])begin
+                        move      <= UP_SWAP;
+                        black_pos <= LEFT_UP;
+                    end
+                    else if (act[2])begin
+                        move      <= RIGHT_SWAP;
+                        black_pos <= RIGHT_DOWN;
+                    end
+                    else begin
+                        move      <= move;
+                        black_pos <= black_pos;
+                    end
                 end
-                else begin
-                    move      <= move;
-                    black_pos <= black_pos;
+                
+                LEFT_DOWN:begin
+                    if (act[0])begin
+                        move      <= LEFT_SWAP;
+                        black_pos <= LEFT_UP;
+                    end
+                    else if (act[1]) begin
+                        move      <= DONW_SWAP;
+                        black_pos <= RIGHT_DOWN;
+                    end
+                    else begin
+                        move      <= move;
+                        black_pos <= black_pos;
+                    end
                 end
-                RIGHT_UP:
-                if (act[3])begin
-                    move      <= UP_SWAP;
-                    black_pos <= LEFT_UP;
+                
+                RIGHT_DOWN:begin
+                    if (act[0])begin
+                        move      <= RIGHT_SWAP;
+                        black_pos <= RIGHT_UP;
+                    end
+                    else if (act[3])begin
+                        move      <= DOWN_SWAP;
+                        black_pos <= LEFT_DOWN;
+                    end
+                    else begin
+                        move      <= move;
+                        black_pos <= black_pos;
+                    end
                 end
-                else if (act[2])begin
-                    move      <= RIGHT_SWAP;
-                    black_pos <= RIGHT_DOWN;
-                end
-                else begin
-                    move      <= move;
-                    black_pos <= black_pos;
-                end
-                LEFT_DOWN:
-                if (act[0])begin
-                    move      <= LEFT_SWAP;
-                    black_pos <= LEFT_UP;
-                end
-                else if (act[1]) begin
-                    move      <= DONW_SWAP;
-                    black_pos <= RIGHT_DOWN;
-                end
-                else begin
-                    move      <= move;
-                    black_pos <= black_pos;
-                end
-                RIGHT_DOWN:
-                if (act[0])begin
-                    move      <= RIGHT_SWAP;
-                    black_pos <= RIGHT_UP;
-                end
-                else if (act[3])begin
-                    move      <= DOWN_SWAP;
-                    black_pos <= LEFT_DOWN;
-                end
-                else begin
-                    move      <= move;
-                    black_pos <= black_pos;
-                end
+    
                 default:begin
                     move      <= move;
                     black_pos <= black_pos;
