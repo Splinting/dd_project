@@ -1,6 +1,6 @@
 `timescale 1ns/1ps
 
-module top_module ();
+module top_sim ();
     reg clk;
     reg rst;
     reg[4:0]bd_num_sw;

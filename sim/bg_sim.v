@@ -1,5 +1,5 @@
 `timescale 1ns/1ps
-module top_module();
+module bg_sim();
     
     localparam CHOSE_BOARD  = 2'b00;
     localparam GAMING       = 2'b01;
@@ -32,7 +32,7 @@ module top_module();
         #20;
         num <= 5'b11100;
         
-        #10;
+        #15;
         random <= 1'b1;
         #5;
         random <= 1'b0;
@@ -40,12 +40,12 @@ module top_module();
         #20;
         num <= 5'b10010;
         
-        #10;
+        #5;
         random <= 1'b1;
         #5;
         random <= 1'b0;
         
-        #10;
+        #25;
         random <= 1'b1;
         #5;
         random <= 1'b0;
@@ -58,7 +58,7 @@ module top_module();
         num <= 5'b10001;
         #20;
         num <= 5'b11100;
-        #10;
+        #5;
         random <= 1'b1;
         #5;
         random <= 1'b0;

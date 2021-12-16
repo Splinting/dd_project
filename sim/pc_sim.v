@@ -1,5 +1,5 @@
 `timescale 1ns/1ps
-module top_module();
+module pc_sim();
     localparam CHOSE_BOARD  = 2'b00;
     localparam GAMING       = 2'b01;
     localparam GAME_INITIAL = 2'b10;
@@ -26,64 +26,64 @@ module top_module();
         origin_bd   <= 12'b001_011_000_010;
         game_status <= CHOSE_BOARD;
         
-        #20;
+        #25;
         active <= 1'b1;
         act[0] <= 1'b1;
-        #5;
+        #10;
         active <= 1'b0;
         act[0] <= 1'b0;
         
         #20;
         game_status <= GAME_INITIAL;
-        #10;
+        #20;
         active <= 1'b1;
         act[0] <= 1'b1;
-        #5;
+        #10;
         active <= 1'b0;
         act[0] <= 1'b0;
         
         #20;
         game_status <= GAMING;
-        #10;
+        #20;
         active <= 1'b1;
         act[0] <= 1'b1;
-        #5;
+        #10;
         active <= 1'b0;
         act[0] <= 1'b0;
         
         #10;
         active <= 1'b1;
         act[1] <= 1'b1;
-        #5;
+        #10;
         active <= 1'b0;
         act[1] <= 1'b0;
         
         #10;
         active <= 1'b1;
         act[2] <= 1'b1;
-        #5;
+        #10;
         active <= 1'b0;
         act[2] <= 1'b0;
         
         #10;
         active <= 1'b1;
         act[3] <= 1'b1;
-        #5;
+        #10;
         active <= 1'b0;
         act[3] <= 1'b0;
         
         #10;
         active <= 1'b1;
         act[2] <= 1'b1;
-        #5;
+        #10;
         active <= 1'b0;
         act[2] <= 1'b0;
         
-        #10;
+        #30;
         reset <= 1'b1;
-        #5;
+        #10;
         reset <= 1'b0;
-        
+
         #20;
         $finish();
         
