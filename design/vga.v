@@ -23,7 +23,7 @@
 module vga
 (
     input sys_clk, rst,
-    //input [11:0] img_nums,
+    input [11:0] img_nums,
     output reg [3:0] red,
     output reg [3:0] green,
     output reg [3:0] blue,
@@ -38,7 +38,6 @@ wire active_flag;
 wire is_hide;
 wire [11:0] data;
 reg [17:0] addr;
-reg [11:0] img_nums = 12'b100_011_010_001;
 
 //get 25MHz clk
 clock_div cd(sys_clk, rst, clk);
