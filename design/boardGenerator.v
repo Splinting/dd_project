@@ -22,9 +22,7 @@ end
 
 always @(posedge clk_d,posedge rst) begin
     if (rst)begin
-        israndom   <= 1'b0;
-        random_reg <= 12'b000_001_010_011;
-        out        <= 12'b000_001_010_011;
+        out <= 12'b000_001_010_011;
     end
     else if (game_status == CHOSE_BOARD)begin
         if (~israndom)begin
@@ -65,19 +63,13 @@ always @(posedge clk_d,posedge rst) begin
                 // ==  ==  ==  ==  ==  ==  ==  ==  ==  ==  ==  ==  ==  ==  ==  ==  = 
                 default:out <= out;
             endcase
-            israndom   <= israndom;
-            random_reg <= random_reg;
         end
         else  begin//israndom
-            israndom   <= israndom;
-            random_reg <= random_reg;
-            out        <= random_reg;
+            out <= random_reg;
         end
     end
     else   begin//game_status! = CHOSE_BOARD
-        israndom   <= 1'b0;
-        random_reg <= 12'b000_001_010_011;
-        out        <= 12'b000_001_010_011;
+        out <= 12'b000_001_010_011;
     end
 end
 always @(posedge clk_d,posedge rst) begin

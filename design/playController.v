@@ -29,24 +29,27 @@ initial begin
 end
 
 always @(posedge clk_d) begin
-    case(game_status)
-        CHOSE_BOARD:begin
-            origin_bd <= origin_board;
-            black_pos <= black_pos;
-            out       <= out;
-        end
-        GAME_INITIAL:begin
-            out       <= {out[11:6],3'b100,out[2:0]};
-            black_pos <= black_pos;
-            origin_bd <= origin_bd;
-        end
-        GAMING:begin
-            if (reset)begin
-                origin_bd <= 12'b000_001_010_011;
-                black_pos <= LEFT_DOWN;
-                out       <= origin_bd;
+    if (reset)begin
+        origin_bd <= 12'b000_001_010_011;
+        black_pos <= LEFT_DOWN;
+        out       <= origin_bd;
+    end
+    else begin
+        case(game_status)
+            CHOSE_BOARD:begin
+                origin_bd <= origin_board;
+                black_pos <= black_pos;
+                out       <= out;
             end
-            else begin
+            GAME_INITIAL:begin
+                // out    <= {origin_bd[11:6],3'b100,origin_bd[2:0]};
+                out[11:6] <= origin_bd[11:6];
+                out[5:3]  <= 3'b100;
+                out[2:0]  <= origin_bd[2:0];
+                black_pos <= black_pos;
+                origin_bd <= origin_bd;
+            end
+            GAMING:begin
                 case(black_pos)
                     LEFT_UP:begin
                         if (act[1])begin
@@ -115,18 +118,18 @@ always @(posedge clk_d) begin
                 endcase
                 origin_bd <= origin_bd;
             end
-        end
-        WINNED:begin
-            origin_bd <= 12'b000_001_010_011;
-            black_pos <= LEFT_DOWN;
-            out       <= out;
-        end
-        default:begin
-            black_pos <= black_pos;
-            origin_bd <= origin_bd;
-            out       <= out;
-        end
-    endcase
+            WINNED:begin
+                origin_bd <= 12'b000_001_010_011;
+                black_pos <= LEFT_DOWN;
+                out       <= out;
+            end
+            default:begin
+                black_pos <= black_pos;
+                origin_bd <= origin_bd;
+                out       <= out;
+            end
+        endcase
+    end
 end
 always @(posedge clk_d) begin
     case(out)

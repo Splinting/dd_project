@@ -1,20 +1,22 @@
-module topControl (input clk_d,
+module topControl (input sys_clk,
                    input rst,
                    input [4:0] board_num_sw,
                    input start_sw,
                    input reset_bt,
                    input [3:0] act_bt,
                    input random_bt,
-                   output reg [11:0]out,
                    output reg[7:0]flow_led,       // ==  ==  ==  ==  ==  = 
                    output reg[4:0] board_num_led,
                    output reg start_led,
-                   rst_led);
+                   output [5:0] step_number);
     
     localparam CHOSE_BOARD  = 2'b00;
     localparam GAMING       = 2'b01;
     localparam GAME_INITIAL = 2'b10;
     localparam WINNED       = 2'b11;
+    
+    wire clk_d;
+    clock_div cd(sys_clk, rst, clk_d);
     
     wire random_flag;
     wire reset_flag;
@@ -32,18 +34,21 @@ module topControl (input clk_d,
     wire [11:0]out_mode_chose;
     wire [11:0]out_mode_game;
     wire [1:0] game_status;
-    wire [5:0] step_number;// ==  ==  ==  ==  ==  ==  ==  = 
+    // ==  ==  ==  ==  ==  ==  ==  = 
     wire win_flag;
     fsm fsm(clk_d,rst,start_sw,win_flag,active,reset_flag,game_status,step_number);
     playController pC(game_status,clk_d,reset_flag,act_flag,out_mode_chose,out_mode_game,win_flag);
     boardGenerator bG(board_num_sw,random_flag,clk_d,rst,game_status,out_mode_chose);
     
+    reg [11:0]out_reg;
     always @(posedge clk_d) begin
         if (game_status == CHOSE_BOARD)
-            out = out_mode_chose;
+            out_reg = out_mode_chose;
         else
-            out = out_mode_game;
+            out_reg = out_mode_game;
     end
+    vga vga(clk_d,rst,out_reg);
+    
     
     assign board_num_led = board_num_sw;
     assign start_led     = start_sw;

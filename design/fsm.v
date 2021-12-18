@@ -20,7 +20,7 @@ module fsm (input clk_d,
     always @(posedge clk_d,posedge rst) begin
         if (rst)
             step_number <= 6'b0;
-        else if (start_sw)begin
+        else if (game_status == GAMING|game_status == GAME_INITIAL)begin
             if (active)begin
                 if (step_number < 6'b111_111)
                     step_number <= step_number+1'b1;
