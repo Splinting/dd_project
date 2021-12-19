@@ -17,7 +17,7 @@ module top_bg (input sys_clk,
     bottomFlag rstF(rst_bt,clk,rst_sw,rst_flag);
     clock_div cd(sys_clk,rst_sw,clk);
     
-    boardGenerator bg(num,rd_flag,clk,rst_flag,game_s,out);
+    board bg(num,rd_flag,clk,rst_flag,game_s,out);
     
     assign gs_led  = game_s;
     assign num_led = num;

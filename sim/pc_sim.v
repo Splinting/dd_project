@@ -17,7 +17,7 @@ module pc_sim();
         #5;
         clk = ~clk;
     end
-    playController pc(game_status,clk,reset,act,origin_bd,out_pc,win_flag);
+    play pc(game_status,clk,reset,act,origin_bd,out_pc,win_flag);
     initial begin
         clk         <= 1'b0;
         reset       <= 1'b0;

@@ -17,7 +17,7 @@ module bg_sim();
         #5;
         clk <= ~clk;
     end
-    boardGenerator bg(num,random,clk,rst,game_status,out);
+    board bg(num,random,clk,rst,game_status,out);
     initial begin
         num         <= 5'b00000;
         clk         <= 1'b0;

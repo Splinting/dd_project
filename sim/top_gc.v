@@ -45,7 +45,7 @@ module top_gc (input sys_clk,
     out<=reg_output;
     end
     
-    playController pc(game_status,clk,reset_flag,act_flag,ori_bd,reg_output,win_led);
+    play pc(game_status,clk,reset_flag,act_flag,ori_bd,reg_output,win_led);
     
     assign rst_led = rst_sw;
     assign stt_led = stt_sw;

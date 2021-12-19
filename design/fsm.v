@@ -3,7 +3,6 @@ module fsm (input clk_d,
             input start_sw,
             input win_flag,
             input active,
-            input reset_flag,
             output reg [1:0]game_status,
             output reg[5:0]step_number);
     
@@ -27,8 +26,6 @@ module fsm (input clk_d,
                 else
                     step_number <= 6'b0;
             end
-            else if (reset_flag)
-                step_number <= 6'b0;
             else
                 step_number <= step_number;
         end
