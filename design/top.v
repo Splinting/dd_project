@@ -18,7 +18,7 @@ module top (input sys_clk,
     wire [11:0] img_nums;
     clock_div clk_d(sys_clk,rst,clk);
     
-//    vga vga(clk,rst,img_nums,red,green,blue,hsync,vsync);
+    vga vga(clk,rst,img_nums,red,green,blue,hsync,vsync);
     gameControl gc(clk,rst,key[4:0],key[5],bottom[0],bottom[4:1],random_key,img_nums);
     assign key_led=key;
     assign rd_led=random_key;
