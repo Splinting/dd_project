@@ -100,11 +100,14 @@ module vga (input clk,
     red   <= data[11:8];
     green <= data[7:4];
     blue  <= data[3:0];
+    /* red   <= 4'b1001;
+    green <= 4'b1001;
+    blue  <= 4'b1001; */
     end
     else begin
     red   <= 4'b0000;
-    green <= 4'b0000   ;
-    blue  <= 4'b0000    ;
+    green <= 4'b0000;
+    blue  <= 4'b0000;
     end
     end
     

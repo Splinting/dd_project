@@ -1,129 +1,143 @@
 module seg (input clk,
             rst,
-            input[5:0]num,
+            input [7:0]num,
             output [3:0]DIG,
-            output[7:0]Y);
+            output [7:0]Y);
 
-    
+wire one,te,hun;
+bin_dec bd(clk,num,rst,one,ten,hun);
+reg [3:0]bcd_reg;
+reg [1:0]cnt;
+always@(posedge clk,negedge rst)begin
+if(rst)	cnt<=2'b00;
+else if(cnt==2'b11)	cnt<=2'b00;
+else cnt<=cnt+1'b1;
+end
+
+always@(posedge clk,negedge rst)begin
+if(rst)bcd_reg<=4'b0000;
+else begin
+case(cnt)
+2'b00:begin
+bcd_reg<=one;
+DIG<=4'b1110;
+end
+2'b01:begin
+bcd_reg<=ten;
+DIG<=4'b1101;
+end
+2'b10:begin
+bcd_reg<=hun;
+DIG<=4'b1011;
+end
+2'b11:begin
+bcd_reg<=4'b0000;
+DIG<=4'b0111;
+end
+default:begin
+bcd_reg<=4'b0000;
+DIG<=4'b0111;
+end
+end
+end
+
+always@(posedge clk,negedge rst)begin
+if(rst)Y<=8'b1100_0000;
+else begin
+case(bcd_reg)
+4'b0000:Y<=8'b1100_0000;  // 0
+4'b0001:Y<=8'b1111_1001;  // 1
+4'b0010:Y<=8'b1010_0100;  // 2
+4'b0011:Y<=8'b1011_0000;  // 3
+4'b0100:Y<=8'b1001_1001;  // 4
+4'b0101:Y<=8'b1001_0010;  // 5
+4'b0110:Y<=8'b1000_0010;  // 6
+4'b0111:Y<=8'b1111_1000;  // 7
+4'b1000:Y<=8'b1000_0000;  // 8
+4'b1001:Y<=8'b1001_0000;  // 9
+default:Y<=8'b1100_0000;  // 0
+end
+end    
 endmodule
 
 
 
-module counter10(rst_n,clkin,t,up_down,D,c); 
- 
-input rst_n,clkin,t,up_down;
-output [3:0]D;//输出的bcd码的计数，只有个位
-output c; //进位或借位
- 
-reg [3:0]D;  //D为四位二进制输出
-reg c;
- 
- 
-always@(posedge clkin or negedge rst_n)
-  begin
-   if(~rst_n) begin D<=0;end
-	else if(t==1)
-      begin
-	     if(up_down==1) 
-		    begin
-			   if(D==4'd8) begin D<=4'd9;c<=1; end
-			   else if(D>=4'd9) begin D<=4'd0;c<=0; end
-				else begin D<=D+1;c<=0; end
-			 end
-			 
-		  if(up_down==0) 
-		    begin
-			   if(D==4'd1) begin D<=4'd0;c<=1; end
-			   else if(D==4'd0) begin D<=4'd9;c<=0; end
-				else begin D<=D-1;c<=0; end
-			 end
-	   end	
-	
+module bin_dec(clk,bin,rst,one,ten,hun);
+input  [7:0] bin;
+input        clk,rst;
+output [3:0] one,ten;
+output [1:0] hun;
+reg    [3:0] one,ten;
+reg    [1:0] hun;
+reg    [3:0] count;
+reg    [17:0]shift_reg=18'b000000000000000000;
+// 计数部分
+always @ ( posedge clk or posedge rst )
+begin
+ if( rst )
+   count<=0;
+ else if (count==9)
+   count<=0;
+ else
+   count<=count+1;
+end
+
+// 二进制转换为十进制 /
+always @ (posedge clk or posedge rst )
+begin
+  if (rst)
+       shift_reg=0;
+  else if (count==0)
+       shift_reg={10'b0000000000,bin};
+  else if ( count<=8)                //实现8次移位操作
+   begin
+      if(shift_reg[11:8]>=5)         //判断个位是否>5，如果是则+3  
+          begin
+             if(shift_reg[15:12]>=5) //判断十位是否>5，如果是则+3  
+                 begin
+   shift_reg[15:12]=shift_reg[15:12]+2'b11;   
+   shift_reg[11:8]=shift_reg[11:8]+2'b11;
+shift_reg=shift_reg<<1;  //对个位和十位操作结束后，整体左移
+ end
+             else
+       begin
+                   shift_reg[15:12]=shift_reg[15:12];
+shift_reg[11:8]=shift_reg[11:8]+2'b11;
+shift_reg=shift_reg<<1;
+ end
+          end              
+      else
+          begin
+             if(shift_reg[15:12]>=5)
+                 begin
+   shift_reg[15:12]=shift_reg[15:12]+2'b11;
+   shift_reg[11:8]=shift_reg[11:8];
+shift_reg=shift_reg<<1;
+ end
+             else
+       begin
+                   shift_reg[15:12]=shift_reg[15:12];
+shift_reg[11:8]=shift_reg[11:8];
+shift_reg=shift_reg<<1;
+ end
+          end        
   end
-  
- 
- 
- endmodule
-
-
-
-
-module counter100(rst_n,clk,clkin,t,up_down,seg,sel,c); 
- 
-input rst_n,clk,clkin,t,up_down;
-output [7:0]seg;  //段选的送显数值的显示码（带小数点8位）低有效
-output [5:0]sel;  //位选信号（6个数码管）低有效
-output c;
- 
-reg [7:0]seg;
-reg [5:0]sel;
-wire c;        //计满输出或者回零输出
- 
-wire [3:0]D0;  //D0为四位二进制bcd码输出，个位  //用函数的时候函数的输出变量必须是wire形式的
-wire [3:0]D1;  //D1为四位二进制bcd码输出，十位
-wire c1;       //个位的进位
-wire c2;       //十位的进位
- 
-reg [15:0]count; //降频计时,数50000个clk 之后count就回到0,过了1ms
-reg [3:0]status; //步骤生成器（6步）
-reg [3:0]seg_data;//段选的送显数值
-wire clkin_ok;
- 
-anti_shake  anti_shake1(.clk(clk),.clkin(clkin),.clkin_ok(clkin_ok));//防抖
- 
-counter10 counter10_0(.rst_n(rst_n),.clkin(clkin_ok),.t(t),.up_down(up_down),.D(D0),.c(c1)); //个位计数
-counter10 counter10_1(.rst_n(rst_n),.clkin(clkin_ok),.t(c1),.up_down(up_down),.D(D1),.c(c2)); //十位计数
-assign c=c1&c2;
-/*当个位和十位都为9，都产生进位时，百位才产生进位！但这里的设计不好，应该说c2
-本身就应该含有t2（c1），但那样做不出来。使能t的判断有问题？下一个沿来的时候，低位的数字变了，t也要变，但我们还是用t变之前的t来判断是否进位。*/
- 
- 
-always@(posedge clk) //步骤发生器，1ms 为一步
-/*count为模50000计数器，count 每到50000就过了1ms，这时status 加1，status是模6计数器。每数50000个上升沿status 就增1；*/
-  begin 
-    if(~rst_n) begin count<=0;status<=0;end
-    else 
-	  begin
-	   if(count==16'd50000) 
-	    begin 
-		  count<=0;
-		  if(status==4'd5) status<=0;
-		  else status<=status+1;
-		 end
-	   else count<=count+1;
-	  end
-  end 
- 
-always@(posedge clk) //每一个步骤的段选和位选（动态扫描），位选低有效
-  begin
-    case(status)
-	   4'd0: begin seg_data<=D0; sel<=6'b111110;end //第1个数码管的数值
-		4'd1: begin seg_data<=D1; sel<=6'b111101;end //第2个数码管的数值
-		4'd2: begin seg_data<=0; sel<=6'b111011;end //第3个数码管的数值
-		4'd3: begin seg_data<=0; sel<=6'b110111;end //第4个数码管的数值
-		4'd4: begin seg_data<=0; sel<=6'b101111;end //第5个数码管的数值
-		4'd5: begin seg_data<=0; sel<=6'b011111;end //第6个数码管的数值
-	   default: begin seg_data<=11; sel<=6'b000000;end //每个数码管的g段都亮
-    endcase
   end
- 
-  
-always@(posedge clk)  //bcd数码管译码器,每段低有效
+
+/输出赋值//
+always @ ( posedge clk or posedge rst )
+begin
+ if ( rst )
   begin
-    case(seg_data)
-	   4'd0: seg<=8'hc0 ;
-	   4'd1: seg<=8'hf9 ;
-	   4'd2: seg<=8'ha4 ;
-      4'd3: seg<=8'hb0 ;
-      4'd4: seg<=8'h99 ;
-      4'd5: seg<=8'h92 ;
-      4'd6: seg<=8'h82 ;
-      4'd7: seg<=8'hf8 ;
-      4'd8: seg<=8'h80 ;
-		4'd9: seg<=8'h90 ;
-	   default:seg<=8'hbf; //每个数码管的g段都亮
-	 endcase
-  end  
- 
- 
+    one<=0;
+    ten<=0;
+    hun<=0; 
+  end
+ else if (count==9)  //此时8次移位全部完成，将对应的值分别赋给个,十,百位
+  begin
+    one<=shift_reg[11:8];
+ten<=shift_reg[15:12];
+hun<=shift_reg[17:16]; 
+  end
+end
 endmodule

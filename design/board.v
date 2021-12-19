@@ -62,7 +62,7 @@ always @(posedge clk_d,posedge rst) begin
             endcase
         end
         else if (set&random)  begin
-            out <= rand_ge;
+            out <= rand_gen;
         end
         else begin
             out <= out;

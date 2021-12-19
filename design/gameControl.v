@@ -28,7 +28,7 @@ module gameControl (input clk_d,
     wire [11:0]out_mode_game;
     wire [1:0] game_status;
     wire win_flag;
-    wire [5:0]step_number;
+    wire [7:0]step_number;
     fsm fsm(clk_d,rst,start_sw,win_flag,active,game_status,step_number);
     play pC(game_status,clk_d,rst,act_flag,out_mode_chose,out_mode_game,win_flag);
     board bG(board_num_sw,random_sw,set_flag,clk_d,rst,game_status,out_mode_chose);
