@@ -5,7 +5,10 @@ module gameControl (input clk_d,
                     input set_bt,
                     input [3:0] act_bt,
                     input random_sw,
-                     output [11:0]out);
+                    output [7:0]DIG,
+                    output [7:0]Y,
+                    output [5:0]flow_led,
+                    output [11:0]out);
     
     localparam CHOSE_BOARD  = 2'b00;
     localparam GAMING       = 2'b01;
@@ -29,20 +32,22 @@ module gameControl (input clk_d,
     wire [1:0] game_status;
     wire win_flag;
     wire [7:0]step_number;
-    fsm fsm(clk_d,rst,start_sw,win_flag,active,game_status,step_number);
+    wire [7:0]game_time;
+    fsm fsm(clk_d,rst,start_sw,win_flag,active,game_status,step_number,game_time);
     play pC(game_status,clk_d,rst,act_flag,out_mode_chose,out_mode_game,win_flag);
     board bG(board_num_sw,random_sw,set_flag,clk_d,rst,game_status,out_mode_chose);
     
     reg [11:0]out_reg;
-    always @(posedge clk_d) begin
-        if (game_status == CHOSE_BOARD)
+    always @(posedge clk_d,posedge rst) begin
+        if (rst)
+            out_reg <= 12'b000_001_010_011;
+        else if (game_status == CHOSE_BOARD)
             out_reg <= out_mode_chose;
         else
             out_reg <= out_mode_game;
     end
     assign out = out_reg;
-
-   // flowLED fled();
-   // seg seg_step();
-   // seg seg_time();
+    
+    flowLED fled(clk_d,rst,win_flag,flow_led);
+    seg_7 sg7(clk_d,rst,step_number,game_time,DIG,Y);
 endmodule
