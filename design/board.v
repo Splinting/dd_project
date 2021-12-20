@@ -6,7 +6,7 @@ module board (input[4:0] num,
               input [1:0]game_status,
               output reg [11:0]out);
 wire[11:0]rand_gen;
-random rd(clk_d,rst,rand_gen);
+random_bd rd(clk_d,rst,rand_gen);
 
 localparam CHOSE_BOARD  = 2'b00;
 localparam GAMING       = 2'b01;
@@ -75,7 +75,7 @@ end
 
 endmodule
 
-module random (
+module random_bd (
     input clk_d,rst,
     output reg[11:0]rand_out
     );

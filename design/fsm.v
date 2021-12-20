@@ -4,7 +4,7 @@ module fsm (input clk_d,
             input win_flag,
             input active,
             output reg [1:0]game_status,
-            output reg[7:0]step_number
+            output reg[7:0]step_number,
             output reg[7:0]game_time);
     
     localparam CHOSE_BOARD  = 2'b00;

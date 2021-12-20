@@ -2,15 +2,15 @@ module seg_7 (input clk,
               rst,
               input [7:0]num_left,
               input [7:0]num_right,
-              output [7:0]DIG,
-              output [7:0]Y);
+              output reg [7:0]DIG,
+              output reg [7:0]Y);
     
     wire[7:0] Y_left;
     wire[7:0] Y_right;
-    reg [3:0]DIG_l;
-    reg [3:0]DIG_r;
+    wire [3:0]DIG_l;
+    wire [3:0]DIG_r;
     
-    seg seg_left(clk,rst,nun_left,DIG_l,Y_left);
+    seg seg_left(clk,rst,num_left,DIG_l,Y_left);
     seg seg_right(clk,rst,num_right,DIG_r,Y_right);
     
     reg [2:0]cnt;
@@ -18,7 +18,7 @@ module seg_7 (input clk,
         if (rst)
             cnt <= 3'b000;
         else if (cnt == 3'b111)
-            cnt< = 3'b000;
+            cnt <= 3'b000;
         else
             cnt <= cnt+1'b1;
     end
@@ -30,11 +30,15 @@ module seg_7 (input clk,
         end
         else if (cnt<3'b100)begin
             Y   <= Y_left;
-            DIG <= {DIG_l,4'b0000};
+            DIG[7:4]<=DIG_l;
+            DIG[3:0]<=4'b0000;
+//            DIG <= {DIG_l,4'b0000};
         end
         else begin
             Y   <= Y_right;
-            DIG <= {4'b0000,DIG_r};
+            DIG[7:4]<=4'b0000;
+            DIG[3:0]<=DIG_r;
+//            DIG <= {4'b0000,DIG_r};
         end
         
     end
@@ -47,7 +51,7 @@ endmodule
         output reg[3:0]DIG,
         output reg[7:0]Y);
         
-        wire one,te,hun;
+        wire one,ten,hun;
         bin_dec bd(clk,num,rst,one,ten,hun);
         reg [3:0]bcd_reg;
         reg [1:0]cnt;
@@ -55,7 +59,7 @@ endmodule
             if (rst)
                 cnt <= 2'b00;
             else if (cnt == 2'b11)
-                cnt< = 2'b00;
+                cnt <= 2'b00;
             else
                 cnt <= cnt+1'b1;
         end
@@ -122,7 +126,7 @@ endmodule
             reg    [1:0] hun;
             reg    [3:0] count;
             reg    [17:0]shift_reg = 18'b000000000000000000;
-            // 计数部分
+            
             always @ (posedge clk or posedge rst)
             begin
                 if (rst)
@@ -133,22 +137,21 @@ endmodule
                     count <= count+1;
             end
             
-            // 二进制转换为十进制 /
             always @ (posedge clk or posedge rst)
             begin
                 if (rst)
                     shift_reg = 0;
                 else if (count == 0)
                     shift_reg = {10'b0000000000,bin};
-                else if (count <= 8)                //实现8次移位操作
+                else if (count <= 8)               
                 begin
-                    if (shif t_reg[11:8]> = 5)         //判断个位是否>5，如果是则+3
+                    if (shift_reg[11:8] >= 5)         
                     begin
-                        if (shif t_reg[15:12]> = 5) //判断十位是否>5，如果是则+3
+                        if (shift_reg[15:12] >= 5) 
                         begin
                             shift_reg[15:12] = shift_reg[15:12]+2'b11;
                             shift_reg[11:8]  = shift_reg[11:8]+2'b11;
-                            shift_reg        = shift_reg<<1;  //对个位和十位操作结束后，整体左移
+                            shift_reg        = shift_reg<<1;  
                         end
                         else
                         begin
@@ -159,7 +162,7 @@ endmodule
                     end
                     else
                     begin
-                        if (shif t_reg[15:12]> = 5)
+                        if (shift_reg[15:12] >= 5)
                         begin
                             shift_reg[15:12] = shift_reg[15:12]+2'b11;
                             shift_reg[11:8]  = shift_reg[11:8];
@@ -178,7 +181,7 @@ endmodule
                 end
             end
             
-            //输出赋值//
+            
             always @ (posedge clk or posedge rst)
             begin
                 if (rst)
@@ -187,7 +190,7 @@ endmodule
                     ten <= 0;
                     hun <= 0;
                 end
-                else if (count == 9)  //此时8次移位全部完成，将对应的值分别赋给个,十,百位
+                else if (count == 9)  
                 begin
                     one <= shift_reg[11:8];
                     ten <= shift_reg[15:12];
