@@ -5,9 +5,9 @@ module play (input [1:0]game_status,
 					   input random,
 						input set,
 						input[4:0] num,
-                       output reg [11:0]out_game,
+                       output [11:0]out_game,
                        output reg win_flag);
-
+//game_status
 localparam CHOSE_BOARD  = 2'b00;
 localparam GAMING       = 2'b01;
 localparam GAME_INITIAL = 2'b10;
@@ -19,11 +19,13 @@ localparam LEFT_DOWN  = 2'b10;
 localparam RIGHT_UP   = 2'b01;
 localparam RIGHT_DOWN = 2'b11;
 
-reg[11:0]out;
-reg [1:0]black_pos;
-reg [2:0]save;
-wire[11:0]rand_gen;
-random rd(clk_d,rst,rand_gen);
+reg[11:0]out;       //board without black block
+reg [11:0]out_game;//board of output, with or without balck block depending on game_status
+reg [1:0]black_pos;//position of black block
+
+wire[11:0]rand_gen;//board generated from random
+random rd(clk_d,rst,rand_gen);//random board generator
+
 initial begin
     black_pos <= LEFT_DOWN;
     out       <= 12'b000_001_010_011;
@@ -81,12 +83,11 @@ always @(posedge clk_d,posedge rst) begin
 				out <= rand_gen;
 			end
 			else begin
-				out<=out;
+				out <= out;
 				end
 				end
             GAME_INITIAL:begin
-                // out    <= {origin_bd[11:6],3'b100,origin_bd[2:0]};
-//                out[5:3]  <= 3'b100;
+                out <= out;
                 black_pos <= LEFT_DOWN;
             end
             GAMING:begin
@@ -168,6 +169,8 @@ always @(posedge clk_d,posedge rst) begin
         endcase
     end
 end
+
+//winning detection
 always @(posedge clk_d) begin
     case(out_game)
         12'b100_001_010_011:win_flag <= 1'b1;
@@ -177,6 +180,8 @@ always @(posedge clk_d) begin
         default:            win_flag <= 1'b0;
     endcase
 end
+
+//print black block
 always @(posedge clk_d,posedge rst) begin
     if(rst)out_game<=12'b000_001_010_011;
     else begin
