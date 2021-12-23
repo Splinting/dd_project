@@ -25,7 +25,8 @@ module clock_div(
     output reg clk_out
     );
     parameter period = 4;
-    reg cnt;
+    parameter width = 1;
+    reg [width-1:0] cnt;
     always @(posedge clk or posedge rst)
     begin
         if (rst) begin

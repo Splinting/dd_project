@@ -1,10 +1,11 @@
-module gameControl (input clk_d,
+module gameControl (input sys_clk, clk_d,
                     input rst,
                     input [4:0] board_num_sw,
                     input start_sw,
                     input set_bt,
                     input [3:0] act_bt,
                     input random_sw,
+                    output possi_led,
                     output [7:0]DIG,
                     output [7:0]Y,
                     output [5:0]flow_led,
@@ -29,12 +30,13 @@ module gameControl (input clk_d,
     
     wire [1:0] game_status;
     wire win_flag;
-    wire [7:0]step_number;
-    wire [7:0]game_time;
-    fsm fsm(clk_d,rst,start_sw,win_flag,active,game_status,step_number,game_time);
-    play pC(game_status,clk_d,rst,act_flag,random_sw,set_flag,board_num_sw,out,win_flag);
+    wire [13:0]step_number;
+    wire timer_en;
+    wire ini_flag;
+    fsm fsm(clk_d,rst,start_sw,win_flag,active,ini_flag,game_status,step_number,timer_en);
+    play pC(game_status,clk_d,rst,act_flag,random_sw,set_flag,board_num_sw,ini_flag,possi_led,out,win_flag);
     
     
     flowLED fled(clk_d,rst,win_flag,flow_led);
-    seg_7 sg7(clk_d,rst,step_number,game_time,DIG,Y);
+    seg_functions(sys_clk, rst,timer_en, step_number,game_status, Y, DIG);
 endmodule
