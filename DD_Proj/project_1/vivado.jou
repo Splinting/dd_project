@@ -1,0 +1,333 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Wed Dec 22 18:37:44 2021
+# Process ID: 152
+# Current directory: C:/Users/Administrator/Desktop/DD_Proj/project_1
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent9748 C:\Users\Administrator\Desktop\DD_Proj\project_1\project_1.xpr
+# Log file: C:/Users/Administrator/Desktop/DD_Proj/project_1/vivado.log
+# Journal file: C:/Users/Administrator/Desktop/DD_Proj/project_1\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/Administrator/Desktop/DD_Proj/project_1/project_1.xpr
+update_compile_order -fileset sources_1
+open_hw
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/Administrator/Desktop/DD_Proj/project_1/project_1.runs/impl_1/top.bit} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+disconnect_hw_server localhost:3121
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/Administrator/Desktop/DD_Proj/project_1/project_1.runs/impl_1/top.bit} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/Administrator/Desktop/DD_Proj/project_1/project_1.runs/impl_1/top.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+close_hw
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+wait_on_run impl_1
+open_run impl_1
+open_hw
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/Administrator/Desktop/DD_Proj/project_1/project_1.runs/impl_1/top.bit} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/Administrator/Desktop/DD_Proj/project_1/project_1.runs/impl_1/top.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/Administrator/Desktop/DD_Proj/project_1/project_1.runs/impl_1/top.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+close_hw
+close_design
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+wait_on_run impl_1
+open_hw
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/Administrator/Desktop/DD_Proj/project_1/project_1.runs/impl_1/top.bit} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/Administrator/Desktop/DD_Proj/project_1/project_1.runs/impl_1/top.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/Administrator/Desktop/DD_Proj/project_1/project_1.runs/impl_1/top.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+close_hw
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+wait_on_run impl_1
+open_hw
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/Administrator/Desktop/DD_Proj/project_1/project_1.runs/impl_1/top.bit} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/Administrator/Desktop/DD_Proj/project_1/project_1.runs/impl_1/top.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/Administrator/Desktop/DD_Proj/project_1/project_1.runs/impl_1/top.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/Administrator/Desktop/DD_Proj/project_1/project_1.runs/impl_1/top.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/Administrator/Desktop/DD_Proj/project_1/project_1.runs/impl_1/top.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+wait_on_run impl_1
+reset_run synth_1
+synth_design -rtl -name rtl_1
+close_hw
+synth_design -rtl -name rtl_1
+close_design
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+synth_design -rtl -name rtl_1
+refresh_design
+update_compile_order -fileset sources_1
+close_design
+synth_design -rtl -name rtl_1
+set_property IOSTANDARD LVCMOS33 [get_ports [list random_key]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list possi_led]]
+place_ports random_key W4
+place_ports rd_led A21
+place_ports possi_led D22
+place_ports {key[5]} Y9
+place_ports {key[4]} W9
+place_ports {key[3]} Y7
+place_ports {key[2]} Y8
+place_ports {key[1]} AB8
+place_ports {key[0]} AA8
+save_constraints_as constrs_2
+set_property target_constrs_file C:/Users/Administrator/Desktop/DD_Proj/project_1/project_1.srcs/constrs_1/new/constrant.xdc [current_fileset -constrset]
+save_constraints -force
+save_constraints
+save_constraints
+save_constraints
+save_constraints
+write_xdc C:/Users/Administrator/Desktop/DD_Proj/project_1/rtl_1.xdc -mode port -force
+save_constraints
+save_constraints
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+wait_on_run impl_1
+close_design
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+wait_on_run impl_1
+synth_design -rtl -name rtl_1
+place_ports random_key W4
+place_ports {key[5]} Y9
+place_ports {key[4]} W9
+place_ports {key[3]} Y7
+place_ports {key[2]} Y8
+place_ports {key[1]} AB8
+place_ports {key[0]} AA8
+save_constraints
+set_property IOSTANDARD LVCMOS33 [get_ports [list rd_led]]
+save_constraints
+close_design
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+wait_on_run impl_1
+open_hw
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/Administrator/Desktop/DD_Proj/project_1/project_1.runs/impl_1/top.bit} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/Administrator/Desktop/DD_Proj/project_1/project_1.runs/impl_1/top.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/Administrator/Desktop/DD_Proj/project_1/project_1.runs/impl_1/top.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+close_hw
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+wait_on_run impl_1
+open_hw
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/Administrator/Desktop/DD_Proj/project_1/project_1.runs/impl_1/top.bit} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/Administrator/Desktop/DD_Proj/project_1/project_1.runs/impl_1/top.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/Administrator/Desktop/DD_Proj/project_1/project_1.runs/impl_1/top.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+close_hw
+synth_design -rtl -name rtl_1
+startgroup
+set_property package_pin "" [get_ports [list  {key_led[3]}]]
+place_ports {key_led[4]} M13
+endgroup
+startgroup
+set_property package_pin "" [get_ports [list  {key_led[2]}]]
+place_ports {key_led[3]} K14
+endgroup
+startgroup
+set_property package_pin "" [get_ports [list  {key_led[1]}]]
+place_ports {key_led[2]} K13
+endgroup
+startgroup
+set_property package_pin "" [get_ports [list  {key_led[0]}]]
+place_ports {key_led[1]} M20
+endgroup
+startgroup
+set_property package_pin "" [get_ports [list  {flow_led[5]}]]
+place_ports {key_led[0]} N20
+endgroup
+place_ports {key[5]} Y9
+place_ports {key[4]} Y7
+place_ports {key[3]} Y8
+place_ports {key[2]} AB8
+place_ports {key[1]} AA8
+place_ports {key[0]} V8
+place_ports random_key AB6
+startgroup
+set_property package_pin "" [get_ports [list  {flow_led[3]}]]
+place_ports rd_led M17
+endgroup
+place_ports {flow_led[5]} G21
+place_ports {flow_led[4]} D21
+place_ports {flow_led[3]} E21
+startgroup
+set_property package_pin "" [get_ports [list  possi_led]]
+place_ports {flow_led[2]} D22
+endgroup
+place_ports {flow_led[1]} E22
+place_ports {flow_led[0]} A21
+place_ports possi_led M15
+save_constraints
+write_xdc C:/Users/Administrator/Desktop/DD_Proj/project_1/rtl_1.xdc -mode port -force
+reset_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+wait_on_run impl_1
+open_hw
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/Administrator/Desktop/DD_Proj/project_1/project_1.runs/impl_1/top.bit} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/Administrator/Desktop/DD_Proj/project_1/project_1.runs/impl_1/top.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/Administrator/Desktop/DD_Proj/project_1/project_1.runs/impl_1/top.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+wait_on_run impl_1
+close_design
+reset_run impl_1 -prev_step 
+close_hw
+export_ip_user_files -of_objects  [get_files C:/Users/Administrator/Desktop/DD_Proj/project_1/project_1.srcs/constrs_1/new/constrant.xdc] -no_script -reset -force -quiet
+remove_files  -fileset constrs_1 C:/Users/Administrator/Desktop/DD_Proj/project_1/project_1.srcs/constrs_1/new/constrant.xdc
+add_files -fileset constrs_1 -norecurse C:/Users/Administrator/Desktop/DD_Proj/project_1/project_1.srcs/constrs_2/new/constrant.xdc
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+wait_on_run impl_1
+synth_design -rtl -name rtl_1
+close_design
+export_ip_user_files -of_objects  [get_files C:/Users/Administrator/Desktop/DD_Proj/project_1/project_1.srcs/constrs_2/new/constrant.xdc] -no_script -reset -force -quiet
+remove_files  -fileset constrs_1 C:/Users/Administrator/Desktop/DD_Proj/project_1/project_1.srcs/constrs_2/new/constrant.xdc
+add_files -fileset constrs_1 -norecurse C:/Users/Administrator/Desktop/DD_Proj/project_1/rtl_1.xdc
+synth_design -rtl -name rtl_1
+place_ports {key[5]} Y7
+place_ports {key[4]} Y8
+place_ports {key[3]} AB8
+place_ports {key[2]} AA8
+place_ports {key[1]} V8
+place_ports {key[0]} V9
+place_ports random_key AB6
+set_property target_constrs_file C:/Users/Administrator/Desktop/DD_Proj/project_1/rtl_1.xdc [current_fileset -constrset]
+save_constraints -force
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+wait_on_run impl_1
+open_hw
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/Administrator/Desktop/DD_Proj/project_1/project_1.runs/impl_1/top.bit} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/Administrator/Desktop/DD_Proj/project_1/project_1.runs/impl_1/top.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/Administrator/Desktop/DD_Proj/project_1/project_1.runs/impl_1/top.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+close_hw
+place_ports {key[5]} Y9
+place_ports {key[4]} Y7
+place_ports {key[3]} Y8
+place_ports {key[2]} AB8
+place_ports {key[1]} AA8
+place_ports {key[0]} V8
+save_constraints -force
+close_design
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+wait_on_run impl_1
+open_hw
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/Administrator/Desktop/DD_Proj/project_1/project_1.runs/impl_1/top.bit} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/Administrator/Desktop/DD_Proj/project_1/project_1.runs/impl_1/top.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/Administrator/Desktop/DD_Proj/project_1/project_1.runs/impl_1/top.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]

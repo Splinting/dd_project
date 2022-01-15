@@ -31,6 +31,7 @@ initial begin
     black_pos <= LEFT_DOWN;
     out       <= 12'b000_001_010_011;
     win_flag  <= 1'b0;
+    ini_flag  <= 1'b0;
 end
 
 always @(posedge clk_d,posedge rst) begin
@@ -101,7 +102,7 @@ always @(posedge clk_d,posedge rst) begin
                 endcase
             end
             GAMING:begin
-                ini_flag <= 1'b0;
+                ini_flag <= 1'b1;
                 case(black_pos)
                     LEFT_UP:begin
                         case(act)
@@ -174,12 +175,12 @@ always @(posedge clk_d,posedge rst) begin
                 endcase
             end
             WINNED:begin
-                ini_flag  <= 1'b0;
+                ini_flag  <= 1'b1;
                 black_pos <= black_pos;
                 out       <= out;
             end
             default:begin
-                ini_flag  <= 1'b0;
+                ini_flag  <= 1'b1;
                 black_pos <= black_pos;
                 out       <= out;
             end

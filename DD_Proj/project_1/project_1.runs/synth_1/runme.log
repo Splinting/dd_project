@@ -1,0 +1,697 @@
+
+*** Running vivado
+    with args -log top.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source top.tcl
+
+
+****** Vivado v2017.4 (64-bit)
+  **** SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+  **** IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source top.tcl -notrace
+Command: synth_design -top top -part xc7a100tfgg484-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 12264 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 413.402 ; gain = 99.656
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'top' [C:/Users/Administrator/Desktop/DD_Proj/project_1/project_1.srcs/sources_1/new/top.v:1]
+INFO: [Synth 8-638] synthesizing module 'clock_div' [C:/Users/Administrator/Desktop/DD_Proj/project_1/project_1.srcs/sources_1/new/clock_div.v:23]
+	Parameter period bound to: 4 - type: integer 
+	Parameter width bound to: 1 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'clock_div' (1#1) [C:/Users/Administrator/Desktop/DD_Proj/project_1/project_1.srcs/sources_1/new/clock_div.v:23]
+INFO: [Synth 8-638] synthesizing module 'vga' [C:/Users/Administrator/Desktop/DD_Proj/project_1/project_1.srcs/sources_1/new/vga.v:23]
+INFO: [Synth 8-638] synthesizing module 'vga_sync' [C:/Users/Administrator/Desktop/DD_Proj/project_1/project_1.srcs/sources_1/new/vga_sync.v:23]
+INFO: [Synth 8-256] done synthesizing module 'vga_sync' (2#1) [C:/Users/Administrator/Desktop/DD_Proj/project_1/project_1.srcs/sources_1/new/vga_sync.v:23]
+INFO: [Synth 8-638] synthesizing module 'image_0' [C:/Users/Administrator/Desktop/DD_Proj/project_1/project_1.runs/synth_1/.Xil/Vivado-5356-A26/realtime/image_0_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'image_0' (3#1) [C:/Users/Administrator/Desktop/DD_Proj/project_1/project_1.runs/synth_1/.Xil/Vivado-5356-A26/realtime/image_0_stub.v:6]
+WARNING: [Synth 8-5788] Register addr_reg in module vga is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Administrator/Desktop/DD_Proj/project_1/project_1.srcs/sources_1/new/vga.v:43]
+INFO: [Synth 8-256] done synthesizing module 'vga' (4#1) [C:/Users/Administrator/Desktop/DD_Proj/project_1/project_1.srcs/sources_1/new/vga.v:23]
+INFO: [Synth 8-638] synthesizing module 'gameControl' [C:/Users/Administrator/Desktop/DD_Proj/project_1/project_1.srcs/sources_1/new/gameControl.v:1]
+	Parameter CHOSE_BOARD bound to: 2'b00 
+	Parameter GAMING bound to: 2'b01 
+	Parameter GAME_INITIAL bound to: 2'b10 
+	Parameter WINNED bound to: 2'b11 
+INFO: [Synth 8-638] synthesizing module 'bottomFlag' [C:/Users/Administrator/Desktop/DD_Proj/project_1/project_1.srcs/sources_1/new/bottomFlag.v:25]
+INFO: [Synth 8-256] done synthesizing module 'bottomFlag' (5#1) [C:/Users/Administrator/Desktop/DD_Proj/project_1/project_1.srcs/sources_1/new/bottomFlag.v:25]
+INFO: [Synth 8-638] synthesizing module 'fsm' [C:/Users/Administrator/Desktop/DD_Proj/project_1/project_1.srcs/sources_1/new/fsm.v:1]
+	Parameter CHOSE_BOARD bound to: 2'b00 
+	Parameter GAMING bound to: 2'b01 
+	Parameter GAME_INITIAL bound to: 2'b10 
+	Parameter WINNED bound to: 2'b11 
+INFO: [Synth 8-256] done synthesizing module 'fsm' (6#1) [C:/Users/Administrator/Desktop/DD_Proj/project_1/project_1.srcs/sources_1/new/fsm.v:1]
+INFO: [Synth 8-638] synthesizing module 'play' [C:/Users/Administrator/Desktop/DD_Proj/project_1/project_1.srcs/sources_1/new/play.v:1]
+	Parameter CHOSE_BOARD bound to: 2'b00 
+	Parameter GAMING bound to: 2'b01 
+	Parameter GAME_INITIAL bound to: 2'b10 
+	Parameter WINNED bound to: 2'b11 
+	Parameter LEFT_UP bound to: 2'b00 
+	Parameter LEFT_DOWN bound to: 2'b10 
+	Parameter RIGHT_UP bound to: 2'b01 
+	Parameter RIGHT_DOWN bound to: 2'b11 
+INFO: [Synth 8-638] synthesizing module 'random' [C:/Users/Administrator/Desktop/DD_Proj/project_1/project_1.srcs/sources_1/new/play.v:229]
+INFO: [Synth 8-256] done synthesizing module 'random' (7#1) [C:/Users/Administrator/Desktop/DD_Proj/project_1/project_1.srcs/sources_1/new/play.v:229]
+INFO: [Synth 8-226] default block is never used [C:/Users/Administrator/Desktop/DD_Proj/project_1/project_1.srcs/sources_1/new/play.v:41]
+INFO: [Synth 8-226] default block is never used [C:/Users/Administrator/Desktop/DD_Proj/project_1/project_1.srcs/sources_1/new/play.v:100]
+INFO: [Synth 8-226] default block is never used [C:/Users/Administrator/Desktop/DD_Proj/project_1/project_1.srcs/sources_1/new/play.v:213]
+INFO: [Synth 8-256] done synthesizing module 'play' (8#1) [C:/Users/Administrator/Desktop/DD_Proj/project_1/project_1.srcs/sources_1/new/play.v:1]
+INFO: [Synth 8-638] synthesizing module 'flowLED' [C:/Users/Administrator/Desktop/DD_Proj/project_1/project_1.srcs/sources_1/new/flowLED.v:1]
+INFO: [Synth 8-638] synthesizing module 'clock_div_bps' [C:/Users/Administrator/Desktop/DD_Proj/project_1/project_1.srcs/sources_1/new/clock_div_bps.v:1]
+INFO: [Synth 8-256] done synthesizing module 'clock_div_bps' (9#1) [C:/Users/Administrator/Desktop/DD_Proj/project_1/project_1.srcs/sources_1/new/clock_div_bps.v:1]
+INFO: [Synth 8-256] done synthesizing module 'flowLED' (10#1) [C:/Users/Administrator/Desktop/DD_Proj/project_1/project_1.srcs/sources_1/new/flowLED.v:1]
+INFO: [Synth 8-638] synthesizing module 'seg_functions' [C:/Users/Administrator/Desktop/DD_Proj/project_1/project_1.srcs/sources_1/new/seg_functions.v:23]
+INFO: [Synth 8-638] synthesizing module 'clock_div__parameterized0' [C:/Users/Administrator/Desktop/DD_Proj/project_1/project_1.srcs/sources_1/new/clock_div.v:23]
+	Parameter period bound to: 1000 - type: integer 
+	Parameter width bound to: 10 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'clock_div__parameterized0' (10#1) [C:/Users/Administrator/Desktop/DD_Proj/project_1/project_1.srcs/sources_1/new/clock_div.v:23]
+INFO: [Synth 8-638] synthesizing module 'clock_div__parameterized1' [C:/Users/Administrator/Desktop/DD_Proj/project_1/project_1.srcs/sources_1/new/clock_div.v:23]
+	Parameter period bound to: 100 - type: integer 
+	Parameter width bound to: 7 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'clock_div__parameterized1' (10#1) [C:/Users/Administrator/Desktop/DD_Proj/project_1/project_1.srcs/sources_1/new/clock_div.v:23]
+INFO: [Synth 8-638] synthesizing module 'seg_tube' [C:/Users/Administrator/Desktop/DD_Proj/project_1/project_1.srcs/sources_1/new/seg_tube.v:23]
+INFO: [Synth 8-226] default block is never used [C:/Users/Administrator/Desktop/DD_Proj/project_1/project_1.srcs/sources_1/new/seg_tube.v:64]
+INFO: [Synth 8-226] default block is never used [C:/Users/Administrator/Desktop/DD_Proj/project_1/project_1.srcs/sources_1/new/seg_tube.v:84]
+WARNING: [Synth 8-5788] Register seg_out_reg in module seg_tube is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Administrator/Desktop/DD_Proj/project_1/project_1.srcs/sources_1/new/seg_tube.v:65]
+INFO: [Synth 8-256] done synthesizing module 'seg_tube' (11#1) [C:/Users/Administrator/Desktop/DD_Proj/project_1/project_1.srcs/sources_1/new/seg_tube.v:23]
+INFO: [Synth 8-256] done synthesizing module 'seg_functions' (12#1) [C:/Users/Administrator/Desktop/DD_Proj/project_1/project_1.srcs/sources_1/new/seg_functions.v:23]
+INFO: [Synth 8-256] done synthesizing module 'gameControl' (13#1) [C:/Users/Administrator/Desktop/DD_Proj/project_1/project_1.srcs/sources_1/new/gameControl.v:1]
+INFO: [Synth 8-256] done synthesizing module 'top' (14#1) [C:/Users/Administrator/Desktop/DD_Proj/project_1/project_1.srcs/sources_1/new/top.v:1]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 466.504 ; gain = 152.758
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 466.504 ; gain = 152.758
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a100tfgg484-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/Administrator/Desktop/DD_Proj/project_1/project_1.runs/synth_1/.Xil/Vivado-5356-A26/dcp1/image_0_in_context.xdc] for cell 'vga/im_0'
+Finished Parsing XDC File [C:/Users/Administrator/Desktop/DD_Proj/project_1/project_1.runs/synth_1/.Xil/Vivado-5356-A26/dcp1/image_0_in_context.xdc] for cell 'vga/im_0'
+Parsing XDC File [C:/Users/Administrator/Desktop/DD_Proj/project_1/rtl_1.xdc]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot change direction of connected port 'DIG[7]' [C:/Users/Administrator/Desktop/DD_Proj/project_1/rtl_1.xdc:1]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot change direction of connected port 'DIG[6]' [C:/Users/Administrator/Desktop/DD_Proj/project_1/rtl_1.xdc:5]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot change direction of connected port 'DIG[5]' [C:/Users/Administrator/Desktop/DD_Proj/project_1/rtl_1.xdc:9]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot change direction of connected port 'DIG[4]' [C:/Users/Administrator/Desktop/DD_Proj/project_1/rtl_1.xdc:13]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot change direction of connected port 'DIG[3]' [C:/Users/Administrator/Desktop/DD_Proj/project_1/rtl_1.xdc:17]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot change direction of connected port 'DIG[2]' [C:/Users/Administrator/Desktop/DD_Proj/project_1/rtl_1.xdc:21]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot change direction of connected port 'DIG[1]' [C:/Users/Administrator/Desktop/DD_Proj/project_1/rtl_1.xdc:25]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot change direction of connected port 'DIG[0]' [C:/Users/Administrator/Desktop/DD_Proj/project_1/rtl_1.xdc:29]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot change direction of connected port 'Y[7]' [C:/Users/Administrator/Desktop/DD_Proj/project_1/rtl_1.xdc:33]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot change direction of connected port 'Y[6]' [C:/Users/Administrator/Desktop/DD_Proj/project_1/rtl_1.xdc:37]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot change direction of connected port 'Y[5]' [C:/Users/Administrator/Desktop/DD_Proj/project_1/rtl_1.xdc:41]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot change direction of connected port 'Y[4]' [C:/Users/Administrator/Desktop/DD_Proj/project_1/rtl_1.xdc:45]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot change direction of connected port 'Y[3]' [C:/Users/Administrator/Desktop/DD_Proj/project_1/rtl_1.xdc:49]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot change direction of connected port 'Y[2]' [C:/Users/Administrator/Desktop/DD_Proj/project_1/rtl_1.xdc:53]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot change direction of connected port 'Y[1]' [C:/Users/Administrator/Desktop/DD_Proj/project_1/rtl_1.xdc:57]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot change direction of connected port 'Y[0]' [C:/Users/Administrator/Desktop/DD_Proj/project_1/rtl_1.xdc:61]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot change direction of connected port 'blue[3]' [C:/Users/Administrator/Desktop/DD_Proj/project_1/rtl_1.xdc:65]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot change direction of connected port 'blue[2]' [C:/Users/Administrator/Desktop/DD_Proj/project_1/rtl_1.xdc:69]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot change direction of connected port 'blue[1]' [C:/Users/Administrator/Desktop/DD_Proj/project_1/rtl_1.xdc:73]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot change direction of connected port 'blue[0]' [C:/Users/Administrator/Desktop/DD_Proj/project_1/rtl_1.xdc:77]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot change direction of connected port 'bottom[4]' [C:/Users/Administrator/Desktop/DD_Proj/project_1/rtl_1.xdc:81]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot change direction of connected port 'bottom[3]' [C:/Users/Administrator/Desktop/DD_Proj/project_1/rtl_1.xdc:83]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot change direction of connected port 'bottom[2]' [C:/Users/Administrator/Desktop/DD_Proj/project_1/rtl_1.xdc:85]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot change direction of connected port 'bottom[1]' [C:/Users/Administrator/Desktop/DD_Proj/project_1/rtl_1.xdc:87]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot change direction of connected port 'bottom[0]' [C:/Users/Administrator/Desktop/DD_Proj/project_1/rtl_1.xdc:89]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot change direction of connected port 'flow_led[5]' [C:/Users/Administrator/Desktop/DD_Proj/project_1/rtl_1.xdc:91]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot change direction of connected port 'flow_led[4]' [C:/Users/Administrator/Desktop/DD_Proj/project_1/rtl_1.xdc:95]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot change direction of connected port 'flow_led[3]' [C:/Users/Administrator/Desktop/DD_Proj/project_1/rtl_1.xdc:99]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot change direction of connected port 'flow_led[2]' [C:/Users/Administrator/Desktop/DD_Proj/project_1/rtl_1.xdc:103]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot change direction of connected port 'flow_led[1]' [C:/Users/Administrator/Desktop/DD_Proj/project_1/rtl_1.xdc:107]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot change direction of connected port 'flow_led[0]' [C:/Users/Administrator/Desktop/DD_Proj/project_1/rtl_1.xdc:111]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot change direction of connected port 'green[3]' [C:/Users/Administrator/Desktop/DD_Proj/project_1/rtl_1.xdc:115]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot change direction of connected port 'green[2]' [C:/Users/Administrator/Desktop/DD_Proj/project_1/rtl_1.xdc:119]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot change direction of connected port 'green[1]' [C:/Users/Administrator/Desktop/DD_Proj/project_1/rtl_1.xdc:123]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot change direction of connected port 'green[0]' [C:/Users/Administrator/Desktop/DD_Proj/project_1/rtl_1.xdc:127]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot change direction of connected port 'key[5]' [C:/Users/Administrator/Desktop/DD_Proj/project_1/rtl_1.xdc:131]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot change direction of connected port 'key[4]' [C:/Users/Administrator/Desktop/DD_Proj/project_1/rtl_1.xdc:133]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot change direction of connected port 'key[3]' [C:/Users/Administrator/Desktop/DD_Proj/project_1/rtl_1.xdc:135]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot change direction of connected port 'key[2]' [C:/Users/Administrator/Desktop/DD_Proj/project_1/rtl_1.xdc:137]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot change direction of connected port 'key[1]' [C:/Users/Administrator/Desktop/DD_Proj/project_1/rtl_1.xdc:139]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot change direction of connected port 'key[0]' [C:/Users/Administrator/Desktop/DD_Proj/project_1/rtl_1.xdc:141]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot change direction of connected port 'key_led[5]' [C:/Users/Administrator/Desktop/DD_Proj/project_1/rtl_1.xdc:143]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot change direction of connected port 'key_led[4]' [C:/Users/Administrator/Desktop/DD_Proj/project_1/rtl_1.xdc:147]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot change direction of connected port 'key_led[3]' [C:/Users/Administrator/Desktop/DD_Proj/project_1/rtl_1.xdc:151]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot change direction of connected port 'key_led[2]' [C:/Users/Administrator/Desktop/DD_Proj/project_1/rtl_1.xdc:155]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot change direction of connected port 'key_led[1]' [C:/Users/Administrator/Desktop/DD_Proj/project_1/rtl_1.xdc:159]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot change direction of connected port 'key_led[0]' [C:/Users/Administrator/Desktop/DD_Proj/project_1/rtl_1.xdc:163]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot change direction of connected port 'red[3]' [C:/Users/Administrator/Desktop/DD_Proj/project_1/rtl_1.xdc:167]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot change direction of connected port 'red[2]' [C:/Users/Administrator/Desktop/DD_Proj/project_1/rtl_1.xdc:171]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot change direction of connected port 'red[1]' [C:/Users/Administrator/Desktop/DD_Proj/project_1/rtl_1.xdc:175]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot change direction of connected port 'red[0]' [C:/Users/Administrator/Desktop/DD_Proj/project_1/rtl_1.xdc:179]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot change direction of connected port 'hsync' [C:/Users/Administrator/Desktop/DD_Proj/project_1/rtl_1.xdc:183]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot change direction of connected port 'possi_led' [C:/Users/Administrator/Desktop/DD_Proj/project_1/rtl_1.xdc:187]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot change direction of connected port 'random_key' [C:/Users/Administrator/Desktop/DD_Proj/project_1/rtl_1.xdc:191]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot change direction of connected port 'rd_led' [C:/Users/Administrator/Desktop/DD_Proj/project_1/rtl_1.xdc:193]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot change direction of connected port 'rst' [C:/Users/Administrator/Desktop/DD_Proj/project_1/rtl_1.xdc:197]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot change direction of connected port 'sys_clk' [C:/Users/Administrator/Desktop/DD_Proj/project_1/rtl_1.xdc:199]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot change direction of connected port 'vsync' [C:/Users/Administrator/Desktop/DD_Proj/project_1/rtl_1.xdc:201]
+Finished Parsing XDC File [C:/Users/Administrator/Desktop/DD_Proj/project_1/rtl_1.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/Administrator/Desktop/DD_Proj/project_1/rtl_1.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [C:/Users/Administrator/Desktop/DD_Proj/project_1/project_1.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/Users/Administrator/Desktop/DD_Proj/project_1/project_1.runs/synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 813.699 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 813.699 ; gain = 499.953
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tfgg484-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 813.699 ; gain = 499.953
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for vga/im_0. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 813.699 ; gain = 499.953
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5546] ROM "v_cnt" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "sample2" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-6014] Unused sequential element count_reg was removed.  [C:/Users/Administrator/Desktop/DD_Proj/project_1/project_1.srcs/sources_1/new/bottomFlag.v:45]
+INFO: [Synth 8-5544] ROM "step_number" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+WARNING: [Synth 8-6014] Unused sequential element regi_reg was removed.  [C:/Users/Administrator/Desktop/DD_Proj/project_1/project_1.srcs/sources_1/new/play.v:238]
+INFO: [Synth 8-5546] ROM "possible_led" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "win_flag" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "out_game" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "clk_bps" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "cnt_second" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "clk_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "clk_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "min" won't be mapped to RAM because it is too sparse
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 813.699 ; gain = 499.953
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     18 Bit       Adders := 1     
+	   3 Input     18 Bit       Adders := 9     
+	   2 Input     14 Bit       Adders := 2     
+	   2 Input     13 Bit       Adders := 2     
+	   2 Input     12 Bit       Adders := 2     
+	   2 Input     10 Bit       Adders := 2     
+	   2 Input      8 Bit       Adders := 1     
+	   2 Input      7 Bit       Adders := 3     
+	   2 Input      6 Bit       Adders := 2     
+	   2 Input      5 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 1     
+	   2 Input      1 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	               18 Bit    Registers := 1     
+	               14 Bit    Registers := 3     
+	               12 Bit    Registers := 5     
+	               10 Bit    Registers := 2     
+	                8 Bit    Registers := 2     
+	                7 Bit    Registers := 3     
+	                6 Bit    Registers := 4     
+	                5 Bit    Registers := 1     
+	                4 Bit    Registers := 4     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 30    
++---Muxes : 
+	   4 Input     18 Bit        Muxes := 4     
+	   2 Input     18 Bit        Muxes := 7     
+	   2 Input     14 Bit        Muxes := 2     
+	   2 Input     12 Bit        Muxes := 10    
+	   6 Input     12 Bit        Muxes := 1     
+	   4 Input     12 Bit        Muxes := 4     
+	   2 Input      9 Bit        Muxes := 2     
+	   2 Input      8 Bit        Muxes := 7     
+	  16 Input      8 Bit        Muxes := 1     
+	   8 Input      8 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 7     
+	   2 Input      5 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 3     
+	   2 Input      2 Bit        Muxes := 2     
+	   4 Input      2 Bit        Muxes := 1     
+	   3 Input      2 Bit        Muxes := 2     
+	   6 Input      2 Bit        Muxes := 1     
+	   8 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 21    
+	   3 Input      1 Bit        Muxes := 2     
+	  25 Input      1 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 1     
+	  26 Input      1 Bit        Muxes := 1     
+	  13 Input      1 Bit        Muxes := 1     
+	  16 Input      1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module clock_div 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      1 Bit       Adders := 1     
++---Registers : 
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module vga_sync 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     12 Bit       Adders := 2     
++---Registers : 
+	               12 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     12 Bit        Muxes := 2     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+Module vga 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     18 Bit       Adders := 1     
+	   3 Input     18 Bit       Adders := 9     
+	   2 Input     13 Bit       Adders := 2     
++---Registers : 
+	               18 Bit    Registers := 1     
+	                4 Bit    Registers := 3     
++---Muxes : 
+	   4 Input     18 Bit        Muxes := 4     
+	   2 Input     18 Bit        Muxes := 7     
+	   2 Input      4 Bit        Muxes := 3     
+Module bottomFlag 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module fsm 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 1     
++---Registers : 
+	               14 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 2     
+	   4 Input      2 Bit        Muxes := 1     
+	   3 Input      1 Bit        Muxes := 1     
+Module random 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      5 Bit       Adders := 1     
++---Registers : 
+	               12 Bit    Registers := 1     
+	                5 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      5 Bit        Muxes := 1     
+	  25 Input      1 Bit        Muxes := 1     
+Module play 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 2     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     12 Bit        Muxes := 8     
+	   6 Input     12 Bit        Muxes := 1     
+	   4 Input     12 Bit        Muxes := 4     
+	   2 Input      9 Bit        Muxes := 2     
+	   2 Input      6 Bit        Muxes := 2     
+	   2 Input      2 Bit        Muxes := 1     
+	   3 Input      2 Bit        Muxes := 2     
+	   6 Input      2 Bit        Muxes := 1     
+	   8 Input      2 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 1     
+	  26 Input      1 Bit        Muxes := 1     
+	  13 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+	   3 Input      1 Bit        Muxes := 1     
+Module clock_div_bps 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     14 Bit       Adders := 2     
++---Registers : 
+	               14 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     14 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 3     
+Module flowLED 
+Detailed RTL Component Info : 
++---Registers : 
+	                6 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      6 Bit        Muxes := 2     
+Module clock_div__parameterized0 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     10 Bit       Adders := 1     
++---Registers : 
+	               10 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module clock_div__parameterized1 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      7 Bit       Adders := 1     
++---Registers : 
+	                7 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module seg_tube 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	                8 Bit    Registers := 2     
+	                4 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
++---Muxes : 
+	  16 Input      8 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 5     
+	   8 Input      8 Bit        Muxes := 1     
+	  16 Input      1 Bit        Muxes := 2     
+Module seg_functions 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      6 Bit       Adders := 2     
++---Registers : 
+	               32 Bit    Registers := 1     
+	                6 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      6 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 3     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5546] ROM "clk_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "clk_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "clk_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "cda/clk_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "cd/clk_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "vga/sync/v_cnt" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gc/stF/sample2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gc/actF0/sample2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gc/actF1/sample2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gc/actF2/sample2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gc/actF3/sample2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gc/pC/possible_led" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gc/pC/win_flag" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gc/fled/clkbps/cnt_second" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gc/fled/clkbps/clk_bps" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-6014] Unused sequential element gc/stF/count_reg was removed.  [C:/Users/Administrator/Desktop/DD_Proj/project_1/project_1.srcs/sources_1/new/bottomFlag.v:45]
+WARNING: [Synth 8-6014] Unused sequential element gc/actF0/count_reg was removed.  [C:/Users/Administrator/Desktop/DD_Proj/project_1/project_1.srcs/sources_1/new/bottomFlag.v:45]
+WARNING: [Synth 8-6014] Unused sequential element gc/actF1/count_reg was removed.  [C:/Users/Administrator/Desktop/DD_Proj/project_1/project_1.srcs/sources_1/new/bottomFlag.v:45]
+WARNING: [Synth 8-6014] Unused sequential element gc/actF2/count_reg was removed.  [C:/Users/Administrator/Desktop/DD_Proj/project_1/project_1.srcs/sources_1/new/bottomFlag.v:45]
+WARNING: [Synth 8-6014] Unused sequential element gc/actF3/count_reg was removed.  [C:/Users/Administrator/Desktop/DD_Proj/project_1/project_1.srcs/sources_1/new/bottomFlag.v:45]
+WARNING: [Synth 8-6014] Unused sequential element gc/pC/rd/regi_reg was removed.  [C:/Users/Administrator/Desktop/DD_Proj/project_1/project_1.srcs/sources_1/new/play.v:238]
+DSP Report: Generating DSP vga/addr1, operation Mode is: A*(B:0x1e0).
+DSP Report: operator vga/addr1 is absorbed into DSP vga/addr1.
+INFO: [Synth 8-3886] merging instance 'gc/fsm/step_number_reg[13]' (FDCE) to 'gc/fsm/step_number_reg[12]'
+INFO: [Synth 8-3886] merging instance 'gc/fsm/step_number_reg[12]' (FDCE) to 'gc/fsm/step_number_reg[11]'
+INFO: [Synth 8-3886] merging instance 'gc/fsm/step_number_reg[11]' (FDCE) to 'gc/fsm/step_number_reg[10]'
+INFO: [Synth 8-3886] merging instance 'gc/fsm/step_number_reg[10]' (FDCE) to 'gc/fsm/step_number_reg[9]'
+INFO: [Synth 8-3886] merging instance 'gc/fsm/step_number_reg[9]' (FDCE) to 'gc/fsm/step_number_reg[8]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\gc/fsm/step_number_reg[8] )
+INFO: [Synth 8-3886] merging instance 'gc/nolabel_line40/nums_reg[15]' (FDC) to 'gc/nolabel_line40/nums_reg[7]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\gc/nolabel_line40/nums_reg[7] )
+INFO: [Synth 8-3886] merging instance 'gc/pC/rd/rand_out_reg[11]' (FDCE) to 'gc/pC/rd/rand_out_reg[8]'
+INFO: [Synth 8-3886] merging instance 'gc/pC/rd/rand_out_reg[5]' (FDCE) to 'gc/pC/rd/rand_out_reg[8]'
+INFO: [Synth 8-3886] merging instance 'gc/pC/rd/rand_out_reg[8]' (FDCE) to 'gc/pC/rd/rand_out_reg[2]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\gc/pC/rd/rand_out_reg[2] )
+WARNING: [Synth 8-3332] Sequential element (gc/nolabel_line40/nums_reg[31]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (gc/nolabel_line40/nums_reg[30]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (gc/nolabel_line40/nums_reg[29]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (gc/nolabel_line40/nums_reg[28]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (gc/nolabel_line40/nums_reg[7]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (gc/pC/rd/rand_out_reg[2]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (gc/fsm/step_number_reg[8]) is unused and will be removed from module top.
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\gc/nolabel_line40/st/seg_out_reg[0]_LDC )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\gc/nolabel_line40/st/seg_out_reg[1]_LDC )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\gc/nolabel_line40/st/seg_out_reg[2]_LDC )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\gc/nolabel_line40/st/seg_out_reg[3]_LDC )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\gc/nolabel_line40/st/seg_out_reg[5]_LDC )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\gc/nolabel_line40/st/seg_out_reg[6]_LDC )
+WARNING: [Synth 8-3332] Sequential element (gc/nolabel_line40/st/seg_out_reg[6]_LDC) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (gc/nolabel_line40/st/seg_out_reg[6]_C) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (gc/nolabel_line40/st/seg_out_reg[5]_LDC) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (gc/nolabel_line40/st/seg_out_reg[5]_C) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (gc/nolabel_line40/st/seg_out_reg[3]_LDC) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (gc/nolabel_line40/st/seg_out_reg[3]_C) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (gc/nolabel_line40/st/seg_out_reg[2]_LDC) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (gc/nolabel_line40/st/seg_out_reg[2]_C) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (gc/nolabel_line40/st/seg_out_reg[1]_LDC) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (gc/nolabel_line40/st/seg_out_reg[1]_C) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (gc/nolabel_line40/st/seg_out_reg[0]_LDC) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (gc/nolabel_line40/st/seg_out_reg[0]_C) is unused and will be removed from module top.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 813.699 ; gain = 499.953
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+ROM:
++------------+-------------------+---------------+----------------+
+|Module Name | RTL Object        | Depth x Width | Implemented As | 
++------------+-------------------+---------------+----------------+
+|random      | rand_out          | 32x12         | LUT            | 
+|play        | out               | 32x12         | LUT            | 
+|top         | gc/pC/rd/rand_out | 32x12         | LUT            | 
+|top         | gc/pC/out         | 32x12         | LUT            | 
++------------+-------------------+---------------+----------------+
+
+
+DSP: Preliminary Mapping  Report (see note below)
++------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|vga         | A*(B:0x1e0) | 18     | 9      | -      | -      | 27     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:27 ; elapsed = 00:00:29 . Memory (MB): peak = 873.492 ; gain = 559.746
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:27 ; elapsed = 00:00:29 . Memory (MB): peak = 874.582 ; gain = 560.836
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3332] Sequential element (gc/pC/out_reg[11]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (gc/pC/out_reg[8]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (gc/pC/out_reg[5]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (gc/pC/out_reg[2]) is unused and will be removed from module top.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 921.184 ; gain = 607.438
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 921.184 ; gain = 607.438
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 921.184 ; gain = 607.438
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 921.184 ; gain = 607.438
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 921.184 ; gain = 607.438
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 921.184 ; gain = 607.438
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 921.184 ; gain = 607.438
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |image_0       |         1|
++------+--------------+----------+
+
+Report Cell Usage: 
++------+--------+------+
+|      |Cell    |Count |
++------+--------+------+
+|1     |image_0 |     1|
+|2     |BUFG    |     2|
+|3     |CARRY4  |   109|
+|4     |DSP48E1 |     1|
+|5     |LUT1    |    50|
+|6     |LUT2    |   244|
+|7     |LUT3    |   175|
+|8     |LUT4    |   129|
+|9     |LUT5    |   115|
+|10    |LUT6    |   210|
+|11    |MUXF7   |     3|
+|12    |FDCE    |   326|
+|13    |FDPE    |    22|
+|14    |FDRE    |    28|
+|15    |IBUF    |    14|
+|16    |OBUF    |    44|
++------+--------+------+
+
+Report Instance Areas: 
++------+-------------------+----------------------------+------+
+|      |Instance           |Module                      |Cells |
++------+-------------------+----------------------------+------+
+|1     |top                |                            |  1484|
+|2     |  clk_d            |clock_div                   |     4|
+|3     |  gc               |gameControl                 |   899|
+|4     |    actF0          |bottomFlag                  |    61|
+|5     |    actF1          |bottomFlag_0                |    61|
+|6     |    actF2          |bottomFlag_1                |    60|
+|7     |    actF3          |bottomFlag_2                |    63|
+|8     |    fled           |flowLED                     |    84|
+|9     |      clkbps       |clock_div_bps               |    71|
+|10    |    fsm            |fsm                         |    81|
+|11    |    nolabel_line40 |seg_functions               |   271|
+|12    |      cda          |clock_div__parameterized0   |    29|
+|13    |      cdb          |clock_div__parameterized0_4 |    29|
+|14    |      cd           |clock_div__parameterized1   |    18|
+|15    |      st           |seg_tube                    |    92|
+|16    |        cd         |clock_div__parameterized1_5 |    19|
+|17    |        cda        |clock_div__parameterized1_6 |    19|
+|18    |    pC             |play                        |   149|
+|19    |      rd           |random                      |    28|
+|20    |    stF            |bottomFlag_3                |    69|
+|21    |  vga              |vga                         |   521|
+|22    |    sync           |vga_sync                    |   437|
++------+-------------------+----------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 921.184 ; gain = 607.438
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 31 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:20 ; elapsed = 00:00:25 . Memory (MB): peak = 921.184 ; gain = 260.242
+Synthesis Optimization Complete : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 921.184 ; gain = 607.438
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 127 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+93 Infos, 33 Warnings, 58 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:30 ; elapsed = 00:00:33 . Memory (MB): peak = 921.184 ; gain = 618.906
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Administrator/Desktop/DD_Proj/project_1/project_1.runs/synth_1/top.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.042 . Memory (MB): peak = 921.184 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Wed Dec 22 20:35:05 2021...

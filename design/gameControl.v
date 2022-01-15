@@ -38,5 +38,5 @@ module gameControl (input sys_clk, clk_d,
     
     
     flowLED fled(clk_d,rst,win_flag,flow_led);
-    seg_functions(sys_clk, rst,timer_en, step_number,game_status, Y, DIG);
+    seg_functions sf(sys_clk, rst,timer_en, step_number,game_status, Y, DIG);
 endmodule

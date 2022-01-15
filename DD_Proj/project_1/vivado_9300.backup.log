@@ -1,0 +1,363 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Wed Dec 22 14:09:49 2021
+# Process ID: 9300
+# Current directory: C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent11396 C:\Users\Administrator\Downloads\DD_Proj_seg_finish\DD_Proj\project_1\project_1.xpr
+# Log file: C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/vivado.log
+# Journal file: C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.xpr
+INFO: [Project 1-313] Project file moved from 'C:/Users/Administrator/Downloads/DD_Proj-1/DD_Proj/DD_Proj/project_1' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2017.4/data/ip'.
+open_project: Time (s): cpu = 00:00:10 ; elapsed = 00:00:07 . Memory (MB): peak = 847.492 ; gain = 113.008
+update_compile_order -fileset sources_1
+add_files -norecurse {C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.srcs/sources_1/new/seg_7.v C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.srcs/sources_1/new/flowLED.v C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.srcs/sources_1/new/play.v C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.srcs/sources_1/new/seg_functions.v C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.srcs/sources_1/new/clock_div.v C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.srcs/sources_1/new/bottomFlag.v C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.srcs/sources_1/new/top.v C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.srcs/sources_1/new/clock_div_bps.v C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.srcs/sources_1/new/fsm.v C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.srcs/sources_1/new/vga_sync.v C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.srcs/sources_1/new/vga.v C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.srcs/sources_1/new/gameControl.v C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.srcs/sources_1/new/seg_tube.v}
+WARNING: [filemgmt 56-12] File 'C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.srcs/sources_1/new/seg_functions.v' cannot be added to the project because it already exists in the project, skipping this file
+WARNING: [filemgmt 56-12] File 'C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.srcs/sources_1/new/clock_div.v' cannot be added to the project because it already exists in the project, skipping this file
+WARNING: [filemgmt 56-12] File 'C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.srcs/sources_1/new/seg_tube.v' cannot be added to the project because it already exists in the project, skipping this file
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.srcs/sources_1/new/seg_7.v] -no_script -reset -force -quiet
+remove_files  C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.srcs/sources_1/new/seg_7.v
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 6
+[Wed Dec 22 14:27:52 2021] Launched synth_1...
+Run output will be captured here: C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.runs/synth_1/runme.log
+add_files C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.srcs/sources_1/ip/image_0/image_0.xci
+export_ip_user_files -of_objects  [get_files  C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.srcs/sources_1/ip/image_0/image_0.xci] -lib_map_path [list {modelsim=C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.cache/compile_simlib/modelsim} {questa=C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.cache/compile_simlib/questa} {riviera=C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.cache/compile_simlib/riviera} {activehdl=C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.cache/compile_simlib/activehdl}] -force -quiet
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 6
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.srcs/sources_1/ip/image_0/image_0.xci' is already up-to-date
+[Wed Dec 22 14:28:48 2021] Launched synth_1...
+Run output will be captured here: C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 6
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.srcs/sources_1/ip/image_0/image_0.xci' is already up-to-date
+[Wed Dec 22 14:30:01 2021] Launched impl_1...
+Run output will be captured here: C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.runs/impl_1/runme.log
+reset_run impl_1 -prev_step 
+reset_run synth_1
+launch_runs synth_1 -jobs 6
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.srcs/sources_1/ip/image_0/image_0.xci' is already up-to-date
+[Wed Dec 22 14:31:09 2021] Launched synth_1...
+Run output will be captured here: C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 6
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.srcs/sources_1/ip/image_0/image_0.xci' is already up-to-date
+[Wed Dec 22 14:31:57 2021] Launched impl_1...
+Run output will be captured here: C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.srcs/sources_1/ip/image_0/image_0.xci' is already up-to-date
+[Wed Dec 22 14:33:30 2021] Launched impl_1...
+Run output will be captured here: C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.runs/impl_1/runme.log
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2017.4
+  **** Build date : Dec 15 2017-21:08:27
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Xilinx/1234-tulA
+set_property PROGRAM.FILE {C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.runs/impl_1/top.bit} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1435] Device xc7a100t (JTAG device index = 0) is not programmed (DONE status = 0).
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.runs/impl_1/top.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+reset_run synth_1
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Xilinx/1234-tulA
+launch_runs synth_1 -jobs 6
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.srcs/sources_1/ip/image_0/image_0.xci' is already up-to-date
+[Wed Dec 22 14:53:16 2021] Launched synth_1...
+Run output will be captured here: C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 6
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.srcs/sources_1/ip/image_0/image_0.xci' is already up-to-date
+[Wed Dec 22 14:54:11 2021] Launched impl_1...
+Run output will be captured here: C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.srcs/sources_1/ip/image_0/image_0.xci' is already up-to-date
+[Wed Dec 22 14:55:56 2021] Launched impl_1...
+Run output will be captured here: C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.runs/impl_1/runme.log
+disconnect_hw_server localhost:3121
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+ERROR: [Labtoolstcl 44-494] There is no active target available for server at localhost.
+ Targets(s) ", jsn-TUL-1234-tulA" may be locked by another hw_server.
+disconnect_hw_server localhost:3121
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Xilinx/1234-tulA
+set_property PROGRAM.FILE {C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.runs/impl_1/top.bit} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1435] Device xc7a100t (JTAG device index = 0) is not programmed (DONE status = 0).
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.runs/impl_1/top.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+reset_run synth_1
+launch_runs synth_1 -jobs 6
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.srcs/sources_1/ip/image_0/image_0.xci' is already up-to-date
+[Wed Dec 22 15:03:56 2021] Launched synth_1...
+Run output will be captured here: C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.runs/synth_1/runme.log
+reset_run synth_1
+launch_runs synth_1 -jobs 6
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.srcs/sources_1/ip/image_0/image_0.xci' is already up-to-date
+[Wed Dec 22 15:04:48 2021] Launched synth_1...
+Run output will be captured here: C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 6
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.srcs/sources_1/ip/image_0/image_0.xci' is already up-to-date
+[Wed Dec 22 15:05:41 2021] Launched impl_1...
+Run output will be captured here: C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.srcs/sources_1/ip/image_0/image_0.xci' is already up-to-date
+[Wed Dec 22 15:07:22 2021] Launched impl_1...
+Run output will be captured here: C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.runs/impl_1/top.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+ERROR: [Labtools 27-3165] End of startup status: LOW
+ERROR: [Common 17-39] 'program_hw_devices' failed due to earlier errors.
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.runs/impl_1/top.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+reset_run synth_1
+launch_runs synth_1 -jobs 6
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.srcs/sources_1/ip/image_0/image_0.xci' is already up-to-date
+[Wed Dec 22 15:11:34 2021] Launched synth_1...
+Run output will be captured here: C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.runs/synth_1/runme.log
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Xilinx/1234-tulA
+close_hw
+launch_runs impl_1 -jobs 6
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.srcs/sources_1/ip/image_0/image_0.xci' is already up-to-date
+[Wed Dec 22 15:12:44 2021] Launched impl_1...
+Run output will be captured here: C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.srcs/sources_1/ip/image_0/image_0.xci' is already up-to-date
+[Wed Dec 22 15:14:46 2021] Launched impl_1...
+Run output will be captured here: C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.runs/impl_1/runme.log
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2017.4
+  **** Build date : Dec 15 2017-21:08:27
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Xilinx/1234-tulA
+set_property PROGRAM.FILE {C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.runs/impl_1/top.bit} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1435] Device xc7a100t (JTAG device index = 0) is not programmed (DONE status = 0).
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.runs/impl_1/top.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7a100tfgg484-1
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.srcs/sources_1/ip/image_0/image_0.dcp' for cell 'vga/im_0'
+INFO: [Netlist 29-17] Analyzing 244 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2017.4
+INFO: [Device 21-403] Loading part xc7a100tfgg484-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.srcs/constrs_1/new/constrant.xdc]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot change direction of connected port 'DIG[7]' [C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.srcs/constrs_1/new/constrant.xdc:70]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot change direction of connected port 'DIG[6]' [C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.srcs/constrs_1/new/constrant.xdc:74]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot change direction of connected port 'DIG[5]' [C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.srcs/constrs_1/new/constrant.xdc:78]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot change direction of connected port 'DIG[4]' [C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.srcs/constrs_1/new/constrant.xdc:82]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot change direction of connected port 'DIG[3]' [C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.srcs/constrs_1/new/constrant.xdc:86]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot change direction of connected port 'DIG[2]' [C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.srcs/constrs_1/new/constrant.xdc:90]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot change direction of connected port 'DIG[1]' [C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.srcs/constrs_1/new/constrant.xdc:94]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot change direction of connected port 'DIG[0]' [C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.srcs/constrs_1/new/constrant.xdc:98]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot change direction of connected port 'Y[7]' [C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.srcs/constrs_1/new/constrant.xdc:102]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot change direction of connected port 'Y[6]' [C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.srcs/constrs_1/new/constrant.xdc:106]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot change direction of connected port 'Y[5]' [C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.srcs/constrs_1/new/constrant.xdc:110]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot change direction of connected port 'Y[4]' [C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.srcs/constrs_1/new/constrant.xdc:114]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot change direction of connected port 'Y[3]' [C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.srcs/constrs_1/new/constrant.xdc:118]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot change direction of connected port 'Y[2]' [C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.srcs/constrs_1/new/constrant.xdc:122]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot change direction of connected port 'Y[1]' [C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.srcs/constrs_1/new/constrant.xdc:126]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot change direction of connected port 'Y[0]' [C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.srcs/constrs_1/new/constrant.xdc:130]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot change direction of connected port 'bottom[4]' [C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.srcs/constrs_1/new/constrant.xdc:146]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot change direction of connected port 'bottom[3]' [C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.srcs/constrs_1/new/constrant.xdc:148]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot change direction of connected port 'bottom[2]' [C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.srcs/constrs_1/new/constrant.xdc:150]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot change direction of connected port 'bottom[1]' [C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.srcs/constrs_1/new/constrant.xdc:152]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot change direction of connected port 'bottom[0]' [C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.srcs/constrs_1/new/constrant.xdc:154]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot change direction of connected port 'flow_led[5]' [C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.srcs/constrs_1/new/constrant.xdc:156]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot change direction of connected port 'flow_led[4]' [C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.srcs/constrs_1/new/constrant.xdc:160]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot change direction of connected port 'flow_led[3]' [C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.srcs/constrs_1/new/constrant.xdc:164]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot change direction of connected port 'flow_led[2]' [C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.srcs/constrs_1/new/constrant.xdc:168]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot change direction of connected port 'flow_led[1]' [C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.srcs/constrs_1/new/constrant.xdc:172]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot change direction of connected port 'flow_led[0]' [C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.srcs/constrs_1/new/constrant.xdc:176]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot change direction of connected port 'key[5]' [C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.srcs/constrs_1/new/constrant.xdc:192]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot change direction of connected port 'key[4]' [C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.srcs/constrs_1/new/constrant.xdc:194]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot change direction of connected port 'key[3]' [C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.srcs/constrs_1/new/constrant.xdc:196]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot change direction of connected port 'key[2]' [C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.srcs/constrs_1/new/constrant.xdc:198]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot change direction of connected port 'key[1]' [C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.srcs/constrs_1/new/constrant.xdc:200]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot change direction of connected port 'key[0]' [C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.srcs/constrs_1/new/constrant.xdc:202]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot change direction of connected port 'key_led[5]' [C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.srcs/constrs_1/new/constrant.xdc:204]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot change direction of connected port 'key_led[4]' [C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.srcs/constrs_1/new/constrant.xdc:208]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot change direction of connected port 'key_led[3]' [C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.srcs/constrs_1/new/constrant.xdc:212]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot change direction of connected port 'key_led[2]' [C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.srcs/constrs_1/new/constrant.xdc:216]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot change direction of connected port 'key_led[1]' [C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.srcs/constrs_1/new/constrant.xdc:220]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot change direction of connected port 'key_led[0]' [C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.srcs/constrs_1/new/constrant.xdc:224]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot change direction of connected port 'outled[11]' [C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.srcs/constrs_1/new/constrant.xdc:228]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot change direction of connected port 'outled[10]' [C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.srcs/constrs_1/new/constrant.xdc:232]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot change direction of connected port 'outled[9]' [C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.srcs/constrs_1/new/constrant.xdc:236]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot change direction of connected port 'outled[8]' [C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.srcs/constrs_1/new/constrant.xdc:240]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot change direction of connected port 'outled[7]' [C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.srcs/constrs_1/new/constrant.xdc:244]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot change direction of connected port 'outled[6]' [C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.srcs/constrs_1/new/constrant.xdc:248]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot change direction of connected port 'outled[5]' [C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.srcs/constrs_1/new/constrant.xdc:252]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot change direction of connected port 'outled[4]' [C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.srcs/constrs_1/new/constrant.xdc:256]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot change direction of connected port 'outled[3]' [C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.srcs/constrs_1/new/constrant.xdc:260]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot change direction of connected port 'outled[2]' [C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.srcs/constrs_1/new/constrant.xdc:264]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot change direction of connected port 'outled[1]' [C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.srcs/constrs_1/new/constrant.xdc:268]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot change direction of connected port 'outled[0]' [C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.srcs/constrs_1/new/constrant.xdc:272]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot change direction of connected port 'random_key' [C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.srcs/constrs_1/new/constrant.xdc:291]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot change direction of connected port 'rd_led' [C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.srcs/constrs_1/new/constrant.xdc:293]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot change direction of connected port 'rst' [C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.srcs/constrs_1/new/constrant.xdc:297]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot change direction of connected port 'sys_clk' [C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.srcs/constrs_1/new/constrant.xdc:299]
+Finished Parsing XDC File [C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.srcs/constrs_1/new/constrant.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+open_run: Time (s): cpu = 00:00:14 ; elapsed = 00:00:09 . Memory (MB): peak = 1997.008 ; gain = 433.281
+reset_run synth_1
+launch_runs synth_1 -jobs 6
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.srcs/sources_1/ip/image_0/image_0.xci' is already up-to-date
+[Wed Dec 22 15:22:57 2021] Launched synth_1...
+Run output will be captured here: C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.runs/synth_1/runme.log
+close_design
+launch_runs impl_1 -jobs 6
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.srcs/sources_1/ip/image_0/image_0.xci' is already up-to-date
+[Wed Dec 22 15:23:48 2021] Launched impl_1...
+Run output will be captured here: C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.srcs/sources_1/ip/image_0/image_0.xci' is already up-to-date
+[Wed Dec 22 15:25:31 2021] Launched impl_1...
+Run output will be captured here: C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.runs/impl_1/runme.log
+open_run impl_1
+INFO: [Netlist 29-17] Analyzing 244 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2017.4
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/.Xil/Vivado-9300-B15/dcp21/top.xdc]
+Finished Parsing XDC File [C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/.Xil/Vivado-9300-B15/dcp21/top.xdc]
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.238 . Memory (MB): peak = 2440.117 ; gain = 0.000
+Restored from archive | CPU: 0.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.238 . Memory (MB): peak = 2440.117 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+WARNING: [Timing 38-313] There are no user specified timing constraints. Timing constraints are needed for proper timing analysis.
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.runs/impl_1/top.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+ERROR: [Labtools 27-3165] End of startup status: LOW
+ERROR: [Common 17-39] 'program_hw_devices' failed due to earlier errors.
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.runs/impl_1/top.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+reset_run synth_1
+launch_runs synth_1 -jobs 6
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.srcs/sources_1/ip/image_0/image_0.xci' is already up-to-date
+[Wed Dec 22 15:27:57 2021] Launched synth_1...
+Run output will be captured here: C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 6
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.srcs/sources_1/ip/image_0/image_0.xci' is already up-to-date
+[Wed Dec 22 15:29:27 2021] Launched impl_1...
+Run output will be captured here: C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.srcs/sources_1/ip/image_0/image_0.xci' is already up-to-date
+[Wed Dec 22 15:32:16 2021] Launched impl_1...
+Run output will be captured here: C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.runs/impl_1/top.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+ERROR: [Labtools 27-3165] End of startup status: LOW
+ERROR: [Common 17-39] 'program_hw_devices' failed due to earlier errors.
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.runs/impl_1/top.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+exit
+INFO: [Common 17-206] Exiting Vivado at Wed Dec 22 15:46:24 2021...

@@ -1,0 +1,144 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Wed Dec 22 14:09:49 2021
+# Process ID: 9300
+# Current directory: C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent11396 C:\Users\Administrator\Downloads\DD_Proj_seg_finish\DD_Proj\project_1\project_1.xpr
+# Log file: C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/vivado.log
+# Journal file: C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.xpr
+update_compile_order -fileset sources_1
+add_files -norecurse {C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.srcs/sources_1/new/seg_7.v C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.srcs/sources_1/new/flowLED.v C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.srcs/sources_1/new/play.v C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.srcs/sources_1/new/seg_functions.v C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.srcs/sources_1/new/clock_div.v C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.srcs/sources_1/new/bottomFlag.v C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.srcs/sources_1/new/top.v C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.srcs/sources_1/new/clock_div_bps.v C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.srcs/sources_1/new/fsm.v C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.srcs/sources_1/new/vga_sync.v C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.srcs/sources_1/new/vga.v C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.srcs/sources_1/new/gameControl.v C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.srcs/sources_1/new/seg_tube.v}
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.srcs/sources_1/new/seg_7.v] -no_script -reset -force -quiet
+remove_files  C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.srcs/sources_1/new/seg_7.v
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 6
+wait_on_run synth_1
+add_files C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.srcs/sources_1/ip/image_0/image_0.xci
+export_ip_user_files -of_objects  [get_files  C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.srcs/sources_1/ip/image_0/image_0.xci] -lib_map_path [list {modelsim=C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.cache/compile_simlib/modelsim} {questa=C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.cache/compile_simlib/questa} {riviera=C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.cache/compile_simlib/riviera} {activehdl=C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.cache/compile_simlib/activehdl}] -force -quiet
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 6
+wait_on_run synth_1
+launch_runs impl_1 -jobs 6
+wait_on_run impl_1
+reset_run impl_1 -prev_step 
+reset_run synth_1
+launch_runs synth_1 -jobs 6
+wait_on_run synth_1
+launch_runs impl_1 -jobs 6
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+wait_on_run impl_1
+open_hw
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.runs/impl_1/top.bit} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.runs/impl_1/top.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+reset_run synth_1
+launch_runs synth_1 -jobs 6
+wait_on_run synth_1
+launch_runs impl_1 -jobs 6
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+wait_on_run impl_1
+disconnect_hw_server localhost:3121
+connect_hw_server
+disconnect_hw_server localhost:3121
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.runs/impl_1/top.bit} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.runs/impl_1/top.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+reset_run synth_1
+launch_runs synth_1 -jobs 6
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 6
+wait_on_run synth_1
+launch_runs impl_1 -jobs 6
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.runs/impl_1/top.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.runs/impl_1/top.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+reset_run synth_1
+launch_runs synth_1 -jobs 6
+wait_on_run synth_1
+close_hw
+launch_runs impl_1 -jobs 6
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+wait_on_run impl_1
+open_hw
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.runs/impl_1/top.bit} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.runs/impl_1/top.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+open_run synth_1 -name synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 6
+wait_on_run synth_1
+close_design
+launch_runs impl_1 -jobs 6
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+wait_on_run impl_1
+open_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.runs/impl_1/top.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.runs/impl_1/top.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+reset_run synth_1
+launch_runs synth_1 -jobs 6
+wait_on_run synth_1
+launch_runs impl_1 -jobs 6
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.runs/impl_1/top.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/Administrator/Downloads/DD_Proj_seg_finish/DD_Proj/project_1/project_1.runs/impl_1/top.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
